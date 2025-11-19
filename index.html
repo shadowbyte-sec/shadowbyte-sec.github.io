@@ -99,13 +99,52 @@ ul li {
 
 /* --- Imagen del diagrama --- */
 .network-img {
-    width: 20%;
-    max-width: 1000px;
+    width: 250px;
     border-radius: 8px;
-    display: block;
-    margin: 20px auto;
+    cursor: pointer;
+    transition: transform 0.2s ease;
 }
 
+/* Efecto hover */
+.network-img:hover {
+    transform: scale(1.05);
+}
+
+/* Lightbox (pop-up) */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.85);
+    backdrop-filter: blur(4px);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+/* Cuando se abre */
+.lightbox: target {
+    display: flex;
+}
+
+/* Imagen grande del pop-up */
+.lightbox img {
+    max-width: 95%;
+    max-height: 95%;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
+    animation: zoom 0.25s ease-out;
+}
+
+/* Animación suave */
+@keyframes zoom {
+    from { transform: scale(0.8); opacity: 0; }
+    to   { transform: scale(1); opacity: 1; }
+}
+      
 /* --- Footer --- */
 footer {
     text-align: center;
@@ -134,7 +173,16 @@ footer {
     <div class="card">
         <h2>Home Lab Network</h2>
         <p>Here is my current network diagram:</p>
-        <img src="My_Home_Network.drawio.png" alt="Home Lab Diagram" class="network-img">
+        <a href="#img-full">
+    <img src="My_Home_Network.drawio.png" class="network-img" alt="Home Lab Diagram">
+</a>
+
+<!-- POP-UP -->
+<div id="img-full" class="lightbox">
+    <a href="#">
+        <img src="My_Home_Network.drawio.png" alt="Home Lab Diagram Full">
+    </a>
+</div>
     </div>
 
     <div class="card">
