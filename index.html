@@ -7,53 +7,84 @@
 
     <style>
       body {
-          background: #0d0d0d;
-          color: #e6e6e6;
-          font-family: Arial, sans-serif;
-          marging: 0;
-          padding: 0;
-      }
+    background-color: #0b0b0b;
+    color: #e6e6e6;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
 
-      header {
-          background: #111;
-          padding: 20px;
-          text-align: center;
-          border-bottom: 2px solid #0ff;
-      }
+/* --- Header --- */
+h1 {
+    color: #00eaff;
+    text-align: center;
+    font-size: 3rem;
+    margin-top: 50px;
+    text-shadow: 0 0 15px #00eaff;
+    letter-spacing: 1px;
+}
 
-      h1 {
-        margin: 0;
-        font-size: 2.5rem;
-        color: #0ff;
-      }
+.subtitle {
+    text-align: center;
+    margin-top: -10px;
+    color: #8ef6ff;
+    font-size: 1.1rem;
+    font-weight: 300;
+}
 
-      .container {
-        width: 90%;
-        max-width: 900px;
-        margin: 40px auto;
-      }
+/* --- Container general --- */
+.section {
+    width: 60%;
+    margin: 40px auto;
+    background: #111;
+    padding: 25px 35px;
+    border-radius: 12px;
+    border: 1px solid #00eaff55;
+    box-shadow: 0 0 20px #00eaff22;
+    transition: 0.3s ease;
+}
 
-      h2 {
-        color: #0ff;
-        margin-top: 40px;
-      }
+.section:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 25px #00eaff55;
+}
 
-      .card {
-        background: #1a1a1a;
-        border-left: 3px solid #0ff;
-        padding: 20px 0;
-        margin: 20px 0;
-        border-radius: 6px;
-      }
+.section h2 {
+    color: #00eaff;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #00eaff55;
+    padding-bottom: 5px;
+}
 
-      footer {
-        text-align: center;
-        margin-top: 40px;
-        padding: 20px;
-        color: #666;
-      }
-      
+/* --- Listas --- */
+ul {
+    list-style-type: square;
+    margin-left: 20px;
+}
+
+ul li {
+    margin: 8px 0;
+}
+
+/* --- Imagen del diagrama --- */
+.network-img {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 15px;
+    box-shadow: 0 0 15px #00eaff44;
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    margin-top: 60px;
+    padding-bottom: 50px;
+    color: #888;
+    font-size: 0.9rem;
+}     
     </style>
+    
   </head>
 
   <body>
